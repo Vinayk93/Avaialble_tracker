@@ -1,4 +1,4 @@
-# Avaialble_tracker
+# Available_tracker
 - Tracking vechile Module.
 
 ### Redis Configuration:
@@ -17,4 +17,7 @@
 ```
 ```
     - GET /request_nearest_coordinates?lat=&long=&distance=
+```
+```
+    GET /remove_user/{user_id}
 ```
