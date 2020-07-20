@@ -1,0 +1,24 @@
+{
+  "name": "avaialble_tracker",
+  "version": "1.0.0",
+  "description": "- Tracking vechile Module.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinayk93/Avaialble_tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vinayk93/Avaialble_tracker/issues"
+  },
+  "homepage": "https://github.com/Vinayk93/Avaialble_tracker#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "redis": "^3.0.2"
+  }
+}
