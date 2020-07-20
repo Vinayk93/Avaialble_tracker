@@ -4,6 +4,9 @@
 ### Redis Configuration:
     - sudo docker-compose up
 
+### Server configuration
+    - node index.js
+
 ### API
 ```
     POST /send_coordinate/{user_id}
