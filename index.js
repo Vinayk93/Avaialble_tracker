@@ -18,6 +18,7 @@ var bodyParser = require('body-parser');
 let app = express();
 app.use(bodyParser.json());
 
+// Get Coordinate
 app.get('/request_nearest_coordinates',(req,res)=>{
     console.log(req.query);
     const lat = (req.query.lat);
@@ -47,6 +48,7 @@ app.get('/request_nearest_coordinates',(req,res)=>{
     });
 });
 
+// Send Coordinate
 app.post('/send_coordinate/:user',(req,res)=>{
     console.log(req.body);
     console.log(req.path);
@@ -66,6 +68,14 @@ app.post('/send_coordinate/:user',(req,res)=>{
     })
 });
 
+app.get('/remove_user/:user',(req,res)=>{
+    const user_id = req.params.user;
+    client.zrem('locations',user_id,(err)=>{
+        console.log(err);
+        res.send("Remove user successfully");
+    })
+});
+
 // docs
 app.get('/*',(req,res)=>{
     res.send(`
@@ -74,6 +84,7 @@ app.get('/*',(req,res)=>{
     <p>Available API</p>
     <p>GET request_nearest_coordinates</p>
     <p>POST send_coordinate/:user_id</p>
+    <p>GET remove_user/:user_id<p>
     <body>
     </html>
     `)
